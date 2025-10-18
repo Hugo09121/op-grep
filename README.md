@@ -4,6 +4,15 @@ An open-source model that produces fast, high-precision code context.
 
 This is an exploration inspired by [SWE-grep](https://cognition.ai/blog/swe-grep).
 
+1. Collect actions (`grep`/`glob`/`read`) policies either from usage logs or open datasets
+2. Optimize by removing redundant actions or parallelisation
+3. Train model on optimized action policy
+4. Release model as a [single file, MCP tool](https://blog.toolkami.com/mcp-server-in-a-file/)
+
+
+## Architecture (v1.0 draft):
+![architecture](images/architecture.png)
+
 ## Quickstart
 
 Install `uv`:
@@ -36,6 +45,29 @@ Where is the feature flag `modal_new_footer` evaluated before render?
 ```
 
 ## Datasets
+
+### Usage Logs
+
+#### OpenAI
+Add this to your Codex's `config.toml`:
+```yaml
+model_provider = "openai-responses-proxied"
+
+[model_providers.openai-responses-proxied]
+name = "OpenAI using Responses with Proxy"
+base_url = "http://127.0.0.1:8080/v1"
+env_key = "OPENAI_API_KEY"
+wire_api = "responses"
+```
+
+Start proxy server:
+```bash
+uv run src/openai_forwarder.py --host 127.0.0.1 --port 8080
+```
+
+Use Codex per usual and you should seen `openai_forwarder.log.jsonl` populated.
+
+#### Synthetic
 The data in `datasets/` are synthetically generated.
 - `example_supervised.jsonl` — 31 queries drawn from realistic engineering scenarios. Each record stores repository metadata, commits, natural-language queries, the turn/parallel budgets, latency target, and multiple ground-truth spans annotated with the tool responsible (`read`, `grep`, `glob`, `summarize`) plus line ranges and reference answers.
 - `example_trajectory.jsonl` — Trajectory rollouts aligned to the same query IDs, logging every tool invocation (command, arguments, timestamps, observations), the final selected tool/path, and reward metrics (weighted-F1, latency, composite score).
